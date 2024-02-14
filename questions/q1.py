@@ -1,6 +1,7 @@
 from common import *
 
 
+# favourite song question
 def check_q1():
     if user_input.get().lower() == "fixer":
         msg = CTkMessagebox(title="Not bad not bad", message="Good job, moving on", option_1="Yay")
@@ -13,7 +14,7 @@ def check_q1():
     elif user_input.get().lower() == "decadism":
         CTkMessagebox(title="Vain much?", message="YOU'RE the one who said not to appropriate your favourite song smh")
     elif user_input.get().lower() in ["just life", "empty prayer", "haze", "fragile", "aoku aoku hikaru", "outer sample"
-                                      ,"lower one's eyes", "folern"]:
+        , "lower one's eyes", "folern"]:
         CTkMessagebox(title="Nulut FTW", message="Good guess from my favourite Nulut fangirl but unfortunately you're "
                                                  "wrong")
     elif user_input.get().lower() in ["enchanted", "i'm glad you're evil too", "android girl"]:

@@ -1,6 +1,7 @@
 from common import *
 
 
+# first date question
 def check_q2():
     if user_input.get().lower() == "22/10/2023":
         msg = CTkMessagebox(title="Not bad not bad", message="You remembered!! <3", option_1="Yay")

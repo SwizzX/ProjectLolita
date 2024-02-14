@@ -9,3 +9,4 @@ b1.grid(row=1, column=0)
 
 # window.wait_window(window)  # Use wait_window to wait for the window to be destroyed
 window.mainloop()
+print("congratulations.py terminated")

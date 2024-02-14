@@ -215,3 +215,4 @@ b2.grid(row=1, column=1)
 
 # window.wait_window(window)  # Use wait_window to wait for the window to be destroyed
 window.mainloop()
+print("my_heart_laid_bare.py terminated")

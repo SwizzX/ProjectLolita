@@ -1,6 +1,7 @@
 from common import *
 
 
+# first AP question
 def check_q4():
     if user_input.get().lower() == "synesthesia ghost" or user_input.get().lower() == "kyoukankaku obake":
         msg = CTkMessagebox(title="And so many more since", message="Synesthesia ghost, Decadism, Fixer, Inochi Bakkari"

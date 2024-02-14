@@ -1,6 +1,7 @@
 from common import *
 
 
+# first cut question
 def check_q3():
     if user_input.get().lower() == "5":
         msg = CTkMessagebox(title="And so many more since", message="The start of my downfall",

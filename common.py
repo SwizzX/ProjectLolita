@@ -8,7 +8,7 @@ import subprocess
 import sys
 
 
-# functions
+# wrong answer array
 bad_message_list = ["Dumbassery incarnate",
                     "Hope you 96.9 all your 14+ses",
                     "trincakes common L",
@@ -23,7 +23,10 @@ bad_message_list = ["Dumbassery incarnate",
                     "no more midnight boba for you"]
 
 
+# functions
 def new_window(title, window_size="600x150"):
+    """ Creates a new window object with title as the window title
+        and window_size as the window size parameter"""
     window = CTk()
     window.title(title)
     window.geometry(window_size)
@@ -34,14 +37,18 @@ def new_window(title, window_size="600x150"):
 
 
 def destroy_window(window):
+    """destroys the window provided in argument"""
     window.destroy()
 
 
 def end_program():
+    """terminates the entire python program"""
     sys.exit()
 
 
 def call_next_script(script_path):
+    """ spaghetti code to get the entire program to run correctly because customtkinter has issues constructing multiple
+        windows for some godforsaken reason"""
     subprocess.run([sys.executable, '-m', 'venv/Scripts/activate_this.py'])
     result = subprocess.run([sys.executable, script_path], capture_output=True, text=True)
     return result
