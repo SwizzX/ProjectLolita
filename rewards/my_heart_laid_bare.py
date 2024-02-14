@@ -1,6 +1,6 @@
 from common import *
 
-#message for you
+# message for you
 window = new_window("Hey babygirl", '600x150')
 
 l1 = CTkLabel(window, text="Hey Julianne, we always end up coming back to this discussion huh?")
@@ -152,39 +152,48 @@ b1.grid(row=1, column=0)
 # window.wait_window(window)  # Use wait_window to wait for the window to be destroyed
 window.mainloop()
 
-def she_said_yes():
+
+def bondage():
     msg = CTkMessagebox(title="Thanks for the chance", message="I really do love you Julianne",
-                            option_1="I know")
+                        option_1="I know")
     response = msg.get()
     if response == "I know":
         destroy_window(window)
     destroy_window(window)
 
-def she_said_no():
-    really_string = "really"
-    msg = CTkMessagebox(title="Are you sure?", message="Are you {} sure?".format(really_string),
-                            option_1="Yes", option_2="No")
+
+def orgasm_denial(sure_counter=1):
+    really_string = "really " * sure_counter
+    msg = CTkMessagebox(title="Are you sure?", message="Are you {}sure?".format(really_string),
+                        option_1="Yes", option_2="No")
     response = msg.get()
-    if response == "Yes":
-        she_said_no_final()
+    if response == "Yes" and sure_counter == 10:
+        asphyxiation()
+        destroy_window(window)
+    elif response == "Yes":
+        sure_counter += 1
+        orgasm_denial(sure_counter)
         destroy_window(window)
     if response == "No":
-        she_said_yes()
+        bondage()
         destroy_window(window)
 
-def she_said_no_final():
-    really_string = "really really"
-    msg = CTkMessagebox(title="Are you sure?", message="Are you {} sure?".format(really_string),
-                            option_1="Yes", option_2="No", option_3="Yes stop loop")
+
+def asphyxiation():
+    really_string = "REALLY "
+    msg = CTkMessagebox(title="Are you sure?", message="Are you {}sure?".format(really_string),
+                        option_1="Yes", option_2="No", option_3="Yes, stop loop")
     response = msg.get()
     if response == "Yes":
-        she_said_no_final()
+        asphyxiation()
     if response == "No":
-        she_said_yes()
+        bondage()
     if response == "Yes stop loop":
-        rejection_window()
+        destroy_window(window)
+        dick_gag()
 
-def rejection_window():
+
+def dick_gag():
     msg = CTkMessagebox(title="fine", message="i still owe you a reward for answering correctly anyway",
                         option_1="Next")
     response = msg.get()
@@ -193,18 +202,16 @@ def rejection_window():
     destroy_window(window)
 
 
-
 window = new_window("Hey babygirl", '700x150')
 counter = 0
 
 l1 = CTkLabel(window, text="Will you be my girlfriend, Julianne?")
 user_input = StringVar()
-b1 = CTkButton(window, command=she_said_yes, text="Yes")
-b2 = CTkButton(window, command=she_said_no, text="No")
+b1 = CTkButton(window, command=bondage, text="Yes")
+b2 = CTkButton(window, command=orgasm_denial, text="No")
 l1.grid(row=0, column=0, padx=60, pady=20)
 b1.grid(row=1, column=0)
 b2.grid(row=1, column=1)
-
 
 # window.wait_window(window)  # Use wait_window to wait for the window to be destroyed
 window.mainloop()

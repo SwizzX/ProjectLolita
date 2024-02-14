@@ -1,7 +1,7 @@
 from common import *
 
 
-def check_q1():
+def check_q2():
     if user_input.get().lower() == "22/10/2023":
         msg = CTkMessagebox(title="Not bad not bad", message="You remembered!! <3", option_1="Yay")
         response = msg.get()
@@ -21,7 +21,7 @@ l1 = CTkLabel(window, text="What's the date of the first time we deliberately ar
                            "formatting as dd/mm/yyyy")
 user_input = StringVar()
 textbox = CTkEntry(window, textvariable=user_input)
-b1 = CTkButton(window, command=check_q1, text="I'm confident")  # Remove parentheses
+b1 = CTkButton(window, command=check_q2, text="I'm confident")  # Remove parentheses
 l1.grid(row=0, column=0)
 textbox.grid(row=1, column=0)
 b1.grid(row=3, column=0)

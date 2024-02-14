@@ -23,7 +23,7 @@ def create_windows():
         sizeof(c_int)
     )
 
-    iconpath = PhotoImage(file="resources/hotpink.png")
+    iconpath = PhotoImage(file="../resources/hotpink.png")
     new_window.wm_iconbitmap()
     new_window.after(300, lambda: new_window.iconphoto(False, iconpath))
 
@@ -42,7 +42,7 @@ def create_windows():
             sizeof(c_int)
         )
 
-        iconpath = PhotoImage(file="resources/pink.png")
+        iconpath = PhotoImage(file="../resources/pink.png")
         new_window.wm_iconbitmap()
         new_window.after(300, lambda: new_window.iconphoto(False, iconpath))
         sleep(0.35)
